@@ -1,0 +1,41 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0; padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+#bg-video {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%; object-fit: cover;
+    z-index: -1;
+}
+
+.navbar {
+    position: fixed; top: 0; width: 100%;
+    background-color: rgba(255,255,255,0.8);
+    padding: 1rem 0; text-align: center;
+    transition: background-color 0.5s;
+}
+.navbar ul li a:hover {
+    color: #DAA520; /* accent or */
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.fade-in.appear {
+    opacity: 1;
+}
+
+/* Exemples de media queries pour le responsive */
+@media (max-width: 768px) {
+    .content { margin-top: 100px; }
+    .content h1 { font-size: 2rem; }
+}
+@media (max-width: 480px) {
+    .navbar ul li { display: block; margin: 0.5rem 0; }
+}
