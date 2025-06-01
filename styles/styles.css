@@ -1,17 +1,20 @@
+/* --- POLICE PERSONNALISÉE --- */
 @font-face {
   font-family: 'CenturyGothic';
   src: url('../assets/font/centurygothic.ttf') format('truetype');
 }
 
+/* --- BASE GÉNÉRALE --- */
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'CenturyGothic', sans-serif;
   background-color: black;
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
+/* --- VIDÉO DE FOND --- */
 .hero {
   position: relative;
   height: 100vh;
@@ -27,9 +30,9 @@ body, html {
   object-fit: cover;
   z-index: -1;
   filter: brightness(0.5);
-  border: none;
 }
 
+/* --- ZONE INTERACTIVE (logo/menu) --- */
 .interactive-zone {
   position: absolute;
   top: 50%;
@@ -41,14 +44,16 @@ body, html {
   justify-content: center;
 }
 
+/* Logo accueil centré */
 .logo {
-  width: 45px; /* encore plus petit */
-  filter: brightness(0) invert(1); /* forcer le blanc */
+  width: 45px; /* Taille réduite à 50% */
+  filter: brightness(0) invert(1); /* Blanc forcé */
   animation: fadeInScale 2s ease;
   cursor: pointer;
   transition: opacity 0.4s;
 }
 
+/* Menu accueil */
 nav {
   display: none;
   flex-direction: column;
@@ -71,7 +76,7 @@ nav a:hover {
   color: #f0a500;
 }
 
-/* Drapeaux langues */
+/* --- DRAPEAUX LANGUE --- */
 .lang-switch {
   position: absolute;
   top: 20px;
@@ -92,6 +97,101 @@ nav a:hover {
   transform: scale(1.1);
 }
 
+/* --- LOGO ET MENU POUR LES AUTRES PAGES --- */
+.logo-top {
+  width: 40px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.menu-top {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.menu-top a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.menu-top a:hover {
+  border-color: #f0a500;
+  color: #f0a500;
+}
+
+/* --- CONTENU PAGES SECONDAIRES --- */
+.page-content {
+  max-width: 800px;
+  margin: 120px auto 60px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-content h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.page-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.page-content ul li {
+  margin-bottom: 10px;
+}
+
+/* --- GALERIE --- */
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* --- FORMULAIRE DE CONTACT --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'CenturyGothic', sans-serif;
+}
+
+form button {
+  padding: 12px;
+  background: #f0a500;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* --- ANIMATIONS --- */
 @keyframes fadeInScale {
   0% {
     opacity: 0;
@@ -103,6 +203,7 @@ nav a:hover {
   }
 }
 
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   .logo {
     width: 35px;
@@ -114,5 +215,13 @@ nav a:hover {
 
   .flag-icon {
     width: 10px;
+  }
+
+  .logo-top {
+    width: 30px;
+  }
+
+  .menu-top {
+    gap: 20px;
   }
 }
