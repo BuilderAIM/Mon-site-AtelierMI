@@ -28,9 +28,9 @@
   <header class="header">
     <div class="logo"><a href="index.html">AMI</a></div>
     <nav class="nav-menu">
-      <a href="a-propos.html">À propos</a>
+      <a href="presentation.html">Presentation</a>
       <a href="approche.html" class="active">Approche</a>
-      <a href="projets.html">Projets</a>
+      <a href="projects.html">Projets</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
