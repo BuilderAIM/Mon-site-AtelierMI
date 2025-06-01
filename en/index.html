@@ -1,28 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atelier MI</title>
-  <link rel="stylesheet" href="../styles/styles.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Assistant', sans-serif;
+      background-color: black;
+      color: white;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    #bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.5);
+    }
+
+    .interactive-zone {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 600;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      cursor: pointer;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .interactive-zone:hover .logo {
+      display: none;
+    }
+
+    .interactive-zone:hover nav {
+      display: flex;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 300;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f0a500;
+    }
+  </style>
 </head>
 <body>
   <div class="hero">
+    <!-- Vidéo de fond -->
     <video autoplay muted loop id="bg-video">
-      <source src="../assets/media/bg.mp4" type="video/mp4"/>
+      <source src="assets/media/bg.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas la vidéo HTML5.
     </video>
+
+    <!-- Zone interactive -->
     <div class="interactive-zone">
-      <img src="../assets/media/logo.png" alt="Atelier MI" class="logo-img">
+      <div class="logo">ATELIER MI</div>
       <nav>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a href="#about">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <div class="lang-switch">
-        <a href="/index.html"><img src="../assets/media/fr.png" alt="Français" class="flag-icon"></a>
-        <a href="/en/index.html"><img src="../assets/media/gb.png" alt="English" class="flag-icon"></a>
-      </div>
     </div>
   </div>
 </body>
