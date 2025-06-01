@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Atelier MI</title>
-  <link rel="stylesheet" href="styles/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
-  <!-- Vidéo de fond -->
+  <!-- Container principal pour vidéo + contenu -->
   <div class="video-container">
-    <video autoplay muted loop id="bg-video">
+
+    <!-- Vidéo de fond -->
+    <video autoplay muted loop playsinline id="bg-video">
       <source src="assets/media/bg.mp4" type="video/mp4">
-      Votre navigateur ne supporte pas la vidéo HTML5.
+      Votre navigateur ne supporte pas la lecture vidéo.
     </video>
+
+    <!-- Overlay sombre -->
     <div class="overlay"></div>
 
     <!-- Drapeaux langue -->
@@ -31,6 +35,7 @@
         <a href="Contact.html">Contact</a>
       </nav>
     </div>
+  </div>
 
 </body>
 </html>
