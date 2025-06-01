@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,16 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atelier MI</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Assistant', sans-serif;
-      background-color: black;
-      color: white;
-      overflow: hidden;
-    }
     .hero {
       position: relative;
       height: 100vh;
@@ -111,3 +103,20 @@
 <body>
   <div class="hero">
     <video autoplay muted loop id="bg-video">
+      <source src="assets/media/bg.mp4" type="video/mp4">
+    </video>
+    <div class="lang-switch">
+      <a href="index.html"><img src="assets/media/fr.png" alt="Français" class="flag-icon"></a>
+      <a href="en/index.html"><img src="assets/media/gb.png" alt="English" class="flag-icon"></a>
+    </div>
+    <div class="interactive-zone">
+      <div class="logo">ATELIER MI</div>
+      <nav>
+        <a href="a-propos.html">À propos</a>
+        <a href="projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</body>
+</html>
