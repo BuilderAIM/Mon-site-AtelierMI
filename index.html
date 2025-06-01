@@ -1,46 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Atelier MI</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="styles/styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Vidéo de fond en plein écran -->
   <div class="hero">
     <video autoplay muted loop id="bg-video">
-      <source src="assets/media/bg.mp4" type="video/mp4">
+      <source src="assets/media/bg.mp4" type="video/mp4"/>
     </video>
-
-    <!-- Zone interactive logo/menu -->
-    <div class="interactive-zone" id="interactive-zone">
-      <div class="logo" id="logo">ATELIER MI</div>
-      <nav class="menu" id="menu">
-        <a href="about.html">À propos</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projets</a>
+    <div class="interactive-zone">
+      <div class="logo">ATELIER MI</div>
+      <nav>
+        <a href="a-propos.html">À propos</a>
+        <a href="projets.html">Projets</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </div>
-
-  <script>
-    const logo = document.getElementById("logo");
-    const menu = document.getElementById("menu");
-    const zone = document.getElementById("interactive-zone");
-
-    zone.addEventListener("mouseenter", () => {
-      logo.style.display = "none";
-      menu.style.display = "flex";
-    });
-
-    zone.addEventListener("mouseleave", () => {
-      logo.style.display = "block";
-      menu.style.display = "none";
-    });
-  </script>
 </body>
 </html>
+
