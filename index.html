@@ -19,15 +19,37 @@
       <a href="en/index.html"><img src="assets/media/gb.png" alt="English" class="flag-icon" /></a>
     </div>
 
-    <!-- Zone interactive (logo + menu au hover) -->
-    <div class="interactive-zone">
-      <img src="assets/media/logo.png" alt="Atelier MI" class="logo" />
-      <nav>
+    <!-- Zone interactive (logo ou menu selon hover) -->
+    <div class="interactive-zone" id="interactive-zone">
+      <img src="assets/media/logo.png" alt="Atelier MI" class="logo" id="logo" />
+      <nav id="menu">
         <a href="a-propos.html">À propos</a>
         <a href="projets.html">Projets</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </div>
+
+  <script>
+    const zone = document.getElementById('interactive-zone');
+    const logo = document.getElementById('logo');
+    const menu = document.getElementById('menu');
+
+    zone.addEventListener('mousemove', (e) => {
+      const rect = zone.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const dx = Math.abs(e.clientX - centerX);
+      const dy = Math.abs(e.clientY - centerY);
+
+      if (dx < 150 && dy < 150) {
+        logo.style.display = 'none';
+        menu.style.display = 'flex';
+      } else {
+        logo.style.display = 'block';
+        menu.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
