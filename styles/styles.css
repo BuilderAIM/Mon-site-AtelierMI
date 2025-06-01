@@ -83,6 +83,7 @@ nav a {
   font-weight: 300;
   border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 nav a:hover {
