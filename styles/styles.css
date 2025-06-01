@@ -1,72 +1,110 @@
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('../assets/font/centurygothic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CenturyGothicBold';
+  src: url('../assets/font/centurygothic_bold.ttf') format('truetype');
+}
+
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Assistant', sans-serif;
+  font-family: 'CenturyGothic', sans-serif;
   background-color: black;
   color: white;
-  height: 100%;
   overflow: hidden;
+  height: 100%;
 }
 
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
+/* Vidéo de fond */
 #bg-video {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Overlay pour obscurcir */
+.overlay {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-color: rgba(0,0,0,0.5);
   z-index: -1;
-  filter: brightness(0.5);
 }
 
-.interactive-zone {
+/* Contenu centré */
+.home-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
-.logo {
-  font-size: 2.5rem;
-  font-weight: 600;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+/* Titre principal */
+.site-title {
+  font-family: 'CenturyGothicBold', sans-serif;
+  font-size: 4em;
+  letter-spacing: 8px;
+  animation: fadeScale 1.5s ease-in-out;
   cursor: pointer;
+  margin-bottom: 40px;
 }
 
-nav {
-  display: none;
-  flex-direction: column;
-  gap: 1.2rem;
-  margin-top: 1.5rem;
-}
-
-.interactive-zone:hover .logo {
-  display: none;
-}
-
-.interactive-zone:hover nav {
+/* Menu */
+.nav-menu {
   display: flex;
+  justify-content: center;
+  gap: 40px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-nav a {
-  color: white;
+.site-title:hover + .nav-menu {
+  opacity: 1;
+}
+
+/* Liens du menu */
+.nav-menu a {
   text-decoration: none;
-  font-weight: 300;
-  font-size: 1.2rem;
-  transition: color 0.3s;
+  color: white;
+  font-size: 1.2em;
+  position: relative;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-nav a:hover {
-  color: #f0a500;
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #f0a500;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Animation */
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
 }
