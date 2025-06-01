@@ -1,3 +1,14 @@
+/* --- POLICES PERSONNALISÉES --- */
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('../assets/font/centurygothic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CenturyGothicBold';
+  src: url('../assets/font/centurygothic_bold.ttf') format('truetype');
+}
+
 /* --- BASE --- */
 html, body {
   margin: 0;
@@ -10,7 +21,7 @@ html, body {
 }
 
 /* --- VIDÉO DE FOND ACCUEIL --- */
-.hero {
+.video-container {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -24,19 +35,8 @@ html, body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1;
-  filter: brightness(0.5);
+  z-index: -2;
   pointer-events: none;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
 }
 
 /* --- DRAPEAUX LANGUE --- */
@@ -69,36 +69,37 @@ html, body {
   text-align: center;
 }
 
-/* Titre animé + disparaît au survol */
+/* Titre animé puis disparaît */
 .site-title {
   font-family: 'CenturyGothicBold', sans-serif;
   font-size: 4em;
   letter-spacing: 8px;
   margin: 0;
   color: white;
-  opacity: 0;
-  animation: fadeInSlow 2.5s ease-in-out forwards;
-  transition: opacity 0.5s ease;
-  cursor: pointer;
+  opacity: 1;
+  animation: fadeInSlow 2s ease-in-out forwards;
+  transition: opacity 0.6s ease;
 }
 
-/* Titre disparaît quand on survole la home */
 .home-content:hover .site-title {
   opacity: 0;
+  visibility: hidden;
 }
 
-/* Menu vertical centré */
+/* Menu centré qui remplace le titre */
 .nav-menu {
-  display: none;
-  margin-top: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   flex-direction: column;
   align-items: center;
+  display: none;
   gap: 30px;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-/* Affiche le menu au survol */
 .home-content:hover .nav-menu {
   display: flex;
   opacity: 1;
@@ -109,11 +110,11 @@ html, body {
   text-decoration: none;
   color: white;
   font-size: 1em;
-  position: relative;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'CenturyGothic', sans-serif;
   white-space: nowrap;
+  position: relative;
 }
 
 .nav-menu a::after {
@@ -131,13 +132,13 @@ html, body {
   width: 100%;
 }
 
-/* Animation plus douce */
+/* Animation titre fluide */
 @keyframes fadeInSlow {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
-/* --- PAGES SECONDAIRES --- */
+/* --- PAGES INTERNES (approche, contact, etc.) --- */
 .page {
   background-color: black;
   color: white;
@@ -194,7 +195,7 @@ html, body {
   width: 100%;
 }
 
-/* Contenu centré */
+/* Contenu centré pages secondaires */
 .content {
   display: flex;
   flex-direction: column;
