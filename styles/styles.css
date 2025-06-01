@@ -1,0 +1,147 @@
+
+body {
+  margin: 0;
+  font-family: 'Assistant', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+#bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 600;
+  animation: fadeInScale 2s ease;
+}
+nav {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid transparent;
+}
+nav a:hover {
+  border-color: #f0a500;
+  color: #f0a500;
+}
+.interactive-zone:hover nav {
+  opacity: 1;
+}
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+.logo-img {
+  width: 120px;
+  height: auto;
+}
+
+.top-left-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.centered-text {
+  text-align: center;
+  padding: 40px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 1000;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+p, li {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 1rem;
+  display: block;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #f0a500;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e49500;
+}
