@@ -69,6 +69,7 @@ html, body {
   text-align: center;
 }
 
+/* Titre animé + disparaît au survol */
 .site-title {
   font-family: 'CenturyGothicBold', sans-serif;
   font-size: 4em;
@@ -76,11 +77,17 @@ html, body {
   margin: 0;
   color: white;
   opacity: 0;
-  animation: fadeIn 1.5s ease-in-out forwards;
+  animation: fadeInSlow 2.5s ease-in-out forwards;
+  transition: opacity 0.5s ease;
   cursor: pointer;
 }
 
-/* Menu modernisé avec espacement vertical */
+/* Titre disparaît quand on survole la home */
+.home-content:hover .site-title {
+  opacity: 0;
+}
+
+/* Menu vertical centré */
 .nav-menu {
   display: none;
   margin-top: 40px;
@@ -91,11 +98,13 @@ html, body {
   transition: opacity 0.5s ease;
 }
 
+/* Affiche le menu au survol */
 .home-content:hover .nav-menu {
   display: flex;
   opacity: 1;
 }
 
+/* Liens du menu */
 .nav-menu a {
   text-decoration: none;
   color: white;
@@ -122,10 +131,10 @@ html, body {
   width: 100%;
 }
 
-/* Animation titre */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Animation plus douce */
+@keyframes fadeInSlow {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* --- PAGES SECONDAIRES --- */
