@@ -89,12 +89,12 @@ html, body {
   cursor: pointer;
 }
 
-/* Menu réduit et resserré */
+/* Menu encore plus petit et plus compact */
 .nav-menu {
   display: none;
   margin-top: 20px;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -107,7 +107,7 @@ html, body {
 .nav-menu a {
   text-decoration: none;
   color: white;
-  font-size: 0.9em;
+  font-size: 0.75em;
   position: relative;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -145,7 +145,6 @@ html, body {
   margin: 0;
 }
 
-/* En-tête sans logo image, juste texte */
 .header {
   display: flex;
   justify-content: space-between;
@@ -194,7 +193,7 @@ html, body {
   width: 100%;
 }
 
-/* Contenu centré verticalement */
+/* Contenu centré */
 .content {
   display: flex;
   flex-direction: column;
