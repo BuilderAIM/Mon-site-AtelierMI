@@ -57,21 +57,27 @@ body, html {
   letter-spacing: 8px;
   animation: fadeScale 1.5s ease-in-out;
   cursor: pointer;
-  margin-bottom: 40px;
+  margin: 0;
+  color: white;
 }
 
+/* Menu caché par défaut */
 .nav-menu {
-  display: flex;
+  display: none;
+  margin-top: 40px;
   justify-content: center;
   gap: 40px;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-.site-title:hover + .nav-menu {
+/* Affichage du menu au survol du bloc */
+.home-content:hover .nav-menu {
+  display: flex;
   opacity: 1;
 }
 
+/* Liens du menu */
 .nav-menu a {
   text-decoration: none;
   color: white;
@@ -79,6 +85,7 @@ body, html {
   position: relative;
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-family: 'CenturyGothic', sans-serif;
 }
 
 .nav-menu a::after {
@@ -96,7 +103,7 @@ body, html {
   width: 100%;
 }
 
-/* --- ANIMATION --- */
+/* Animation du titre */
 @keyframes fadeScale {
   0% {
     opacity: 0;
@@ -108,7 +115,7 @@ body, html {
   }
 }
 
-/* --- PAGES SECONDAIRES (about, projets, contact) --- */
+/* --- PAGES INTERNES --- */
 .page {
   background-color: black;
   color: white;
@@ -153,6 +160,7 @@ body, html {
 .about-text p {
   line-height: 1.8;
   margin-bottom: 20px;
+  font-family: 'CenturyGothic', sans-serif;
 }
 
 .section-subtitle {
@@ -172,4 +180,5 @@ body, html {
 .service-list li {
   margin-bottom: 15px;
   line-height: 1.6;
+  font-family: 'CenturyGothic', sans-serif;
 }
