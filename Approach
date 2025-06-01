@@ -2,46 +2,53 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Notre approche – Atelier MI</title>
-  <link rel="stylesheet" href="styles/styles.css">
+  <title>Approche – AMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    .logo a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.6rem;
+      transition: transform 0.2s ease;
+    }
+    .logo a:hover {
+      transform: scale(1.05);
+    }
+    .section-title {
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+    }
+  </style>
 </head>
 <body class="page">
 
-  <!-- En-tête avec menu -->
   <header class="header">
-    <div class="logo">ATELIER MI</div>
+    <div class="logo"><a href="index.html">AMI</a></div>
     <nav class="nav-menu">
       <a href="a-propos.html">À propos</a>
-      <a href="approche.html">Approche</a>
-      <a href="projects.html">Projets</a>
-      <a href="Contact.html">Contact</a>
+      <a href="approche.html" class="active">Approche</a>
+      <a href="projets.html">Projets</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- Contenu principal -->
-  <main class="content">
-    <h1 class="section-title">Notre approche</h1>
+  <div class="content">
+    <h1 class="section-title">Une méthode claire<br>un pilotage sur mesure</h1>
+    <div class="about-text">
+      <p>L’approche AMI repose sur une conviction simple : un projet bien pensé est un projet bien mené. Nous intervenons en tant que pilote indépendant, garant de la vision, de la cohérence et de l’exécution.</p>
 
-    <section class="about-text">
-      <p>
-        Notre approche repose sur une conviction simple : <strong>le projet est avant tout une relation de confiance</strong>.
-        Chaque chantier que nous pilotons est pensé comme un partenariat actif, où écoute, transparence et exigence
-        guident chacune de nos décisions.
-      </p>
-      <p>
-        Grâce à notre connaissance des codes du luxe, de l’hôtellerie et du retail, nous garantissons un accompagnement
-        complet, du concept initial jusqu’à la réception finale, avec un œil attentif sur les délais, les coûts et la qualité.
-      </p>
-      <p>
-        Nous croyons à une <strong>vision engagée</strong> du rôle de maître d’œuvre : proposer, challenger, ajuster, pour que chaque espace
-        livré soit non seulement conforme, mais <em>signifiant</em>.
-      </p>
-      <p>
-        En résumé, nous simplifions la complexité, pour que vous puissiez vous concentrer sur l’essentiel : vos idées.
-      </p>
-    </section>
-  </main>
+      <p>Nous ne remplaçons pas les architectes, nous les encadrons. Nous ne dessinons pas les rêves, nous les structurons. En tant qu’interface stratégique entre vous et l’ensemble des parties prenantes — architectes, ingénieurs, bureaux d’études, entreprises — nous assurons la fluidité, la rigueur et l’ambition de votre projet.</p>
+
+      <p>Notre méthode repose sur une lecture transversale des enjeux : design, technique, budget, calendrier, usages. Nous savons traduire une idée forte en chantier maîtrisé, avec un regard exigeant sur chaque étape.</p>
+
+      <p>Plutôt que de s’enfermer dans une approche normative, nous travaillons dans un cadre souple et collaboratif, en intégrant si besoin des partenaires habilités pour garantir la conformité réglementaire (architectes HMONP, bureaux d'études techniques ou spécialisés).</p>
+
+      <p>AMI, c’est une posture libre, une coordination fluide, et un seul objectif : livrer un projet juste, sans compromis sur la qualité, le sens ou l’exécution.</p>
+    </div>
+  </div>
 
 </body>
 </html>
