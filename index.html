@@ -1,94 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atelier MI - Pilotage & Design d'Espaces</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier MI</title>
+  <link rel="stylesheet" href="styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;600&display=swap" rel="stylesheet">
-  <meta name="description" content="Atelier MI propose des services de pilotage de projets architecturaux, design d'intérieur, agencement et coordination tous corps d'état pour les particuliers et professionnels." />
 </head>
 <body>
-  <!-- Section Hero avec vidéo de fond -->
+  <!-- Vidéo de fond en plein écran -->
   <div class="hero">
     <video autoplay muted loop id="bg-video">
-      <source src="media/bg.mp4" type="video/mp4">
+      <source src="assets/media/bg.mp4" type="video/mp4">
     </video>
-    <div class="logo" id="logo">ATELIER MI</div>
-    <nav class="menu" id="menu">
-      <a href="#about">À propos</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projets</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+    <!-- Zone interactive logo/menu -->
+    <div class="interactive-zone" id="interactive-zone">
+      <div class="logo" id="logo">ATELIER MI</div>
+      <nav class="menu" id="menu">
+        <a href="about.html">À propos</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projets</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </div>
 
-  <!-- Section À propos -->
-  <section id="about" class="section">
-    <h2>À propos</h2>
-    <p>
-      Atelier MI est né de la volonté d'accompagner avec exigence, clarté et créativité chaque étape de vos projets de construction ou de rénovation. Fort d'une expertise d'architecte d'État, nous pilotons vos projets de A à Z : de l'étude à la réception.
-    </p>
-    <p>
-      Notre approche mêle rigueur de gestion et sens du design, dans un esprit minimaliste et humain. Notre mission : simplifier la complexité pour donner forme à vos espaces de vie ou de travail.
-    </p>
-  </section>
+  <script>
+    const logo = document.getElementById("logo");
+    const menu = document.getElementById("menu");
+    const zone = document.getElementById("interactive-zone");
 
-  <!-- Section Services -->
-  <section id="services" class="section">
-    <h2>Nos Services</h2>
-    <ul class="services-list">
-      <li><strong>Pilotage de projet :</strong> Coordination des intervenants, réunions de chantier, planning, reporting.</li>
-      <li><strong>Gestion budgétaire :</strong> Estimation des coûts, suivi des devis, optimisation des dépenses.</li>
-      <li><strong>Design d'intérieur :</strong> Conception d'espaces, scénographie, agencement sur mesure, mobilier intégré.</li>
-      <li><strong>Expertise complète :</strong> Suivi global jusqu’à la livraison, conseils réglementaires et techniques.</li>
-    </ul>
-  </section>
+    zone.addEventListener("mouseenter", () => {
+      logo.style.display = "none";
+      menu.style.display = "flex";
+    });
 
-  <!-- Section Projets -->
-  <section id="projects" class="section">
-    <h2>Projets</h2>
-    <div class="project-gallery">
-      <div class="project-item">
-        <img src="media/project1.jpg" alt="Projet Maison contemporaine" />
-        <p>Maison contemporaine – Pilotage complet & design intérieur</p>
-      </div>
-      <div class="project-item">
-        <img src="media/project2.jpg" alt="Projet Bureaux industriels" />
-        <p>Bureaux industriels – Coordination TCE & mobilier sur mesure</p>
-      </div>
-      <div class="project-item">
-        <img src="media/project3.jpg" alt="Projet Rénovation appartement" />
-        <p>Rénovation appartement – Accompagnement client + style sobre</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Contact -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Une idée ? Un projet ? Discutons-en.</p>
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="Nom" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <textarea name="message" placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-    <div class="contact-infos">
-      <p>Email : contact@atelier-mi.fr</p>
-      <p>Téléphone : +33 6 12 34 56 78</p>
-      <p>Localisation : Lyon & Paris</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Atelier MI — Architecture & Design. Tous droits réservés.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    zone.addEventListener("mouseleave", () => {
+      logo.style.display = "block";
+      menu.style.display = "none";
+    });
+  </script>
 </body>
 </html>
-
