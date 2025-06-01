@@ -13,13 +13,13 @@
       <source src="assets/media/bg.mp4" type="video/mp4" />
     </video>
 
-    <!-- Sélecteur de langue -->
+    <!-- Drapeaux de langue -->
     <div class="lang-switch">
       <a href="index.html"><img src="assets/media/fr.png" alt="Français" class="flag-icon" /></a>
       <a href="en/index.html"><img src="assets/media/gb.png" alt="English" class="flag-icon" /></a>
     </div>
 
-    <!-- Zone interactive (logo ou menu selon hover) -->
+    <!-- Zone interactive -->
     <div class="interactive-zone" id="interactive-zone">
       <img src="assets/media/logo.png" alt="Atelier MI" class="logo" id="logo" />
       <nav id="menu">
@@ -49,6 +49,11 @@
         logo.style.display = 'block';
         menu.style.display = 'none';
       }
+    });
+
+    zone.addEventListener('mouseleave', () => {
+      logo.style.display = 'block';
+      menu.style.display = 'none';
     });
   </script>
 </body>
