@@ -65,7 +65,7 @@ html, body {
 /* Titre animé puis disparaît */
 .site-title {
   font-family: 'CenturyGothicBold', sans-serif;
-  font-size: 4em;
+  font-size: 6em;
   letter-spacing: 8px;
   margin: 0;
   color: white;
@@ -105,7 +105,7 @@ html, body {
   font-size: 1em;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: 'CenturyGothic', sans-serif;
+  font-family: 'CenturyGothicBold', sans-serif;
   white-space: nowrap;
   position: relative;
 }
@@ -237,10 +237,4 @@ html, body {
   padding-left: 0;
   margin-top: 40px;
   text-align: center;
-}
-
-.service-list li {
-  margin-bottom: 10px;
-  line-height: 1.6;
-  font-family: 'CenturyGothic', sans-serif;
 }
