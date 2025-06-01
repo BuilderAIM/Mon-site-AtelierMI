@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Notre approche – Atelier MI</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page">
+
+  <!-- En-tête avec menu -->
+  <header class="header">
+    <div class="logo">ATELIER MI</div>
+    <nav class="nav-menu">
+      <a href="a-propos.html">À propos</a>
+      <a href="approche.html">Approche</a>
+      <a href="projects.html">Projets</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contenu principal -->
+  <main class="content">
+    <h1 class="section-title">Notre approche</h1>
+
+    <section class="about-text">
+      <p>
+        Notre approche repose sur une conviction simple : <strong>le projet est avant tout une relation de confiance</strong>.
+        Chaque chantier que nous pilotons est pensé comme un partenariat actif, où écoute, transparence et exigence
+        guident chacune de nos décisions.
+      </p>
+      <p>
+        Grâce à notre connaissance des codes du luxe, de l’hôtellerie et du retail, nous garantissons un accompagnement
+        complet, du concept initial jusqu’à la réception finale, avec un œil attentif sur les délais, les coûts et la qualité.
+      </p>
+      <p>
+        Nous croyons à une <strong>vision engagée</strong> du rôle de maître d’œuvre : proposer, challenger, ajuster, pour que chaque espace
+        livré soit non seulement conforme, mais <em>signifiant</em>.
+      </p>
+      <p>
+        En résumé, nous simplifions la complexité, pour que vous puissiez vous concentrer sur l’essentiel : vos idées.
+      </p>
+    </section>
+  </main>
+
+</body>
+</html>
