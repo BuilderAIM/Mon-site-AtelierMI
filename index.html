@@ -10,6 +10,7 @@
     .nav-menu a {
       text-shadow: 0 0 0.5px black;
     }
+
     @media (max-width: 768px) {
       .nav-menu {
         position: fixed;
@@ -37,6 +38,36 @@
         text-shadow: 0 0 0.5px black;
       }
     }
+
+    .lang-container {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 60px;
+      height: 40px;
+      background-image: url('assets/media/noir.png');
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+    }
+    .lang-options {
+      display: none;
+      flex-direction: column;
+      gap: 0.5rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: black;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+    .lang-container:hover .lang-options {
+      display: flex;
+    }
+    .lang-options img {
+      width: 30px;
+      height: auto;
+    }
   </style>
 </head>
 
@@ -48,10 +79,12 @@
     Votre navigateur ne supporte pas la lecture vidéo.
   </video>
 
-  <!-- Drapeaux langue -->
-  <div class="lang-switch">
-    <a href="index.html"><img src="assets/media/fr.png" alt="FR"></a>
-    <a href="en/index.html"><img src="assets/media/gb.png" alt="EN"></a>
+  <!-- Sélecteur de langue au hover -->
+  <div class="lang-container">
+    <div class="lang-options">
+      <a href="index.html"><img src="assets/media/fr.png" alt="FR"></a>
+      <a href="en/index.html"><img src="assets/media/uk.png" alt="EN"></a>
+    </div>
   </div>
 
   <!-- Contenu centré -->
