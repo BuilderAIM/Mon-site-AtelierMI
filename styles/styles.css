@@ -145,3 +145,93 @@ form button {
 form button:hover {
   background-color: #e49500;
 }
+.logo-top {
+  width: 60px;
+  filter: brightness(0) invert(1);
+  margin: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu-top {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.menu-top a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.menu-top a:hover {
+  border-color: #f0a500;
+  color: #f0a500;
+}
+
+.page-content {
+  max-width: 800px;
+  margin: 120px auto 60px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-content h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.page-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.page-content ul li {
+  margin-bottom: 10px;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'CenturyGothic', sans-serif;
+}
+
+form button {
+  padding: 12px;
+  background: #f0a500;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
