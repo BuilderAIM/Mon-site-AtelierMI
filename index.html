@@ -10,65 +10,6 @@
     .nav-menu a {
       text-shadow: 0 0 0.5px black;
     }
-
-    @media (max-width: 768px) {
-      .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 75%;
-        background-color: rgba(0, 0, 0, 0.95);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: right 0.3s ease;
-        z-index: 1000;
-      }
-      .nav-menu.active {
-        right: 0;
-      }
-      .logo a {
-        cursor: pointer;
-      }
-      .nav-menu a {
-        font-size: 1.5rem;
-        margin: 1rem 0;
-        text-shadow: 0 0 0.5px black;
-      }
-    }
-
-    .lang-container {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      width: 60px;
-      height: 40px;
-      background-image: url('assets/media/noir.png');
-      background-size: cover;
-      background-position: center;
-      cursor: pointer;
-      z-index: 20;
-    }
-    .lang-options {
-      display: none;
-      flex-direction: column;
-      gap: 0.5rem;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: black;
-      padding: 0.5rem;
-      border-radius: 5px;
-    }
-    .lang-container:hover .lang-options {
-      display: flex;
-    }
-    .lang-options img {
-      width: 30px;
-      height: auto;
-    }
   </style>
 </head>
 
@@ -80,18 +21,16 @@
     Votre navigateur ne supporte pas la lecture vidéo.
   </video>
 
-  <!-- Sélecteur de langue au hover -->
-  <div class="lang-container">
-    <div class="lang-options">
-      <a href="index.html"><img src="assets/media/fr.png" alt="FR"></a>
-      <a href="en/index.html"><img src="assets/media/uk.png" alt="EN"></a>
-    </div>
+  <!-- Drapeaux langue -->
+  <div class="lang-switch">
+    <a href="index.html"><img src="assets/media/fr.png" alt="FR"></a>
+    <a href="en/index.html"><img src="assets/media/gb.png" alt="EN"></a>
   </div>
 
   <!-- Contenu centré -->
   <div class="home-content">
-    <h1 class="site-title logo"><a href="#">AMI</a></h1>
-    <nav class="nav-menu">
+    <h1 class="site-title">AMI</h1>
+    <nav class="nav-menu" style="margin-top: 1rem;">
       <a href="presentation.html">Presentation</a>
       <a href="approche.html">Approche</a>
       <a href="projects.html">Projets</a>
@@ -99,19 +38,6 @@
     </nav>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const logo = document.querySelector('.logo a');
-      const menu = document.querySelector('.nav-menu');
-
-      logo.addEventListener('click', function(event) {
-        if (window.innerWidth <= 768) {
-          event.preventDefault();
-          menu.classList.toggle('active');
-        }
-      });
-    });
-  </script>
-
 </body>
 </html>
+
